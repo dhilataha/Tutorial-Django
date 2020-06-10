@@ -1,0 +1,39 @@
+.jumbotron {
+    background-image: url("/static/img/header.png");
+    background-position: center;
+    height: 500px;
+    background-size: cover;
+}
+
+#banner {
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    font-family: arial;
+}
+
+nav ul {
+    background-color: aqua;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    color: brown;
+    display: block;
+    font-family: arial;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+nav a: hover {
+    background-color: #ff0000;
+}

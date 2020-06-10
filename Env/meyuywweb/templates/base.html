@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{subtitle}} | Open Class</title>
+
+    {% include "snippets/style.html" %}
+    <!-- <link rel="stylesheet" type="text/css" href="{% static app_css%}"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+    {% include "snippets/navbar.html" %}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            {% block header %} {% endblock header %}
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container bg-light text-dark shadow" style="margin-top:-100px">
+            <div class="row" style="height: 800px;">
+
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <p>Website ini dibuat menggunakan django
+        <p>
+            <h5>By: {{contributor}}</h5>
+            <!-- <img style="width:100%" src="{% static 'img/banner_home.png' %}" alt=""> -->
+
+            <img id="banner" src="{% static banner %}" alt="">
+            <nav>
+
+                <ul>
+                    {% for link, name in nav%}
+                    <li>
+                        <a href="{{link}}" title="">{{name}}</a>
+                    </li>
+
+                    {% endfor %}
+
+
+                </ul>
+            </nav>
+            <div class="container">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+
+            {% include "snippets/scripts.html" %}
+            <ul>
+                <li><a href="/" title="">Home</a></li>
+                <li><a href="/about/" title="">About</a></li>
+                <li><a href="/blog/" title="">Blog</a></li>
+                <li><a href="/blog/recent/" title="">Recent</a></li>
+            </ul>
+</body>
+
+</html>
